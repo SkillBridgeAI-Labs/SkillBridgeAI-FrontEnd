@@ -31,8 +31,7 @@ export default function Payment() {
           </a>
           <div className="d-none d-lg-flex mx-auto gap-4">
             <a href="/#features" className="text-decoration-none nav-link-custom">Features</a>
-            <a href="/#how" className="text-decoration-none nav-link-custom">How It Works</a>
-            <a href="/#opportunities" className="text-decoration-none nav-link-custom">Opportunities</a>
+           
             <a href="/#mentors" className="text-decoration-none nav-link-custom">Mentors</a>
             <span className="text-decoration-none nav-link-custom fw-bold" style={{ color: "#22D3C5" }}>Pricing</span>
           </div>

@@ -11,7 +11,7 @@ import {
   BsShieldCheck,
   BsBriefcase,
   BsGlobe,
-  BsPalette,
+  
   BsPeople,
 } from "react-icons/bs";
 
@@ -40,8 +40,7 @@ export default function Home() {
 
         <div className="d-none d-lg-flex mx-auto gap-4">
             <a href="#features" className="text-decoration-none nav-link-custom">Features</a>
-            <a href="#how" className="text-decoration-none nav-link-custom">How It Works</a>
-            <a href="#opportunities" className="text-decoration-none nav-link-custom">Opportunities</a>
+           
             <a href="#mentors" className="text-decoration-none nav-link-custom">Mentors</a>
             <a href="#pricing" className="text-decoration-none nav-link-custom" onClick={(e) => { e.preventDefault(); navigate("/payment"); }}>Pricing</a>
         </div>
