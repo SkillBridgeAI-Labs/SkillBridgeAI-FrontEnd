@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -96,5 +96,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload
->>>>>>> dd9626c399870986cd8e23035f48857afef12472
+
 "# my-first-project" 
