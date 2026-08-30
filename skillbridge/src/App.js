@@ -7,15 +7,22 @@ import MentorSignup from "./pages/MentorSignup";
 import MentorLogin from "./pages/MentorLogin";
 import Payment from "./pages/Payment";
 import PaymentSuccess from "./pages/PaymentSuccess";
-
+import Mentors from "./pages/Mentors";
+import OnboardingWelcome from "./pages/OnboardingWelcome";
+import OnboardingStep2 from "./pages/OnboardingStep2";
+import OnboardingStep3 from "./pages/OnboardingStep3";
+import OnboardingFinalizing from "./pages/OnboardingFinalizing";
+import { OnboardingProvider } from "./context/OnboardingContext";
+import OnboardingRoadmap from "./pages/OnboardingRoadmap";
 // جوا <Routes>
 
 function App() {
   return (
     <BrowserRouter>
+    <OnboardingProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-
+        <Route path="/mentors" element={<Mentors />} />
         {/* شاشة اختيار الدور - نفس الصورة 1 تُستخدم للحالتين */}
         <Route path="/signup" element={<RoleSelect intent="signup" />} />
         <Route path="/login" element={<RoleSelect intent="login" />} />
@@ -30,8 +37,15 @@ function App() {
 
         <Route path="/payment" element={<Payment />} />
         <Route path="/payment-success" element={<PaymentSuccess />} />
+        <Route path="/onboarding" element={<OnboardingWelcome />} />
+       <Route path="/onboarding/step-2" element={<OnboardingStep2 />} />
+       <Route path="/onboarding/step-3" element={<OnboardingStep3 />} />
+       <Route path="/onboarding/finalizing" element={<OnboardingFinalizing />} />
+       <Route path="/onboarding/roadmap" element={<OnboardingRoadmap />} />
       </Routes>
+    </OnboardingProvider>
     </BrowserRouter>
+
   );
 }
 

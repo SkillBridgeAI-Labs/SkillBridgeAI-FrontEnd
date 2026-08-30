@@ -32,7 +32,7 @@ export default function Payment() {
           <div className="d-none d-lg-flex mx-auto gap-4">
             <a href="/#features" className="text-decoration-none nav-link-custom">Features</a>
            
-            <a href="/#mentors" className="text-decoration-none nav-link-custom">Mentors</a>
+           <a href="/#mentors" className="text-decoration-none nav-link-custom" onClick={(e) => { e.preventDefault(); navigate("/mentors"); }}>Mentors</a>
             <span className="text-decoration-none nav-link-custom fw-bold" style={{ color: "#22D3C5" }}>Pricing</span>
           </div>
           <div className="d-flex align-items-center gap-3">

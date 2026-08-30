@@ -41,7 +41,7 @@ export default function Home() {
         <div className="d-none d-lg-flex mx-auto gap-4">
             <a href="#features" className="text-decoration-none nav-link-custom">Features</a>
            
-            <a href="#mentors" className="text-decoration-none nav-link-custom">Mentors</a>
+            <a href="#mentors" className="text-decoration-none nav-link-custom" onClick={(e) => { e.preventDefault(); navigate("/mentors"); }}>Mentors</a>
             <a href="#pricing" className="text-decoration-none nav-link-custom" onClick={(e) => { e.preventDefault(); navigate("/payment"); }}>Pricing</a>
         </div>
 

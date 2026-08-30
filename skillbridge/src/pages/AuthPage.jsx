@@ -38,6 +38,7 @@ export default function AuthPage({ mode }) {
     e.preventDefault();
     // TODO: اربطها بالـ API الخاص بالتسجيل / تسجيل الدخول
     console.log(isSignUp ? "Sign up:" : "Login:", form);
+     navigate("/onboarding");
   };
 
   return (
