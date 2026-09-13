@@ -24,7 +24,7 @@ const paths = {
       { key: "Django", label: "Django/Flask", icon: <SiDjango /> },
       { key: "REST APIs", label: "REST APIs", icon: <BsDiagram3Fill /> },
       { key: "Database Design", label: "Database Design", icon: <BsDatabaseFill />, hours: 35 },
-      { key: "Node.js", label: "Node.js", icon: <FaNodeJs />, hours: 35 },
+      { key: "Git", label: "Git & GitHub", icon: <BsDiagram3Fill />, hours: 35 },
       { key: "Docker", label: "Docker/K8s", icon: <FaDocker />, hours: 35 },
       { key: "Backend Deployment", label: "Backend Deployment", icon: <BsCloudUploadFill />, hours: 35 },
       { key: "System Design", label: "System Design", icon: <BsKanbanFill />, hours: 25 },
@@ -40,26 +40,25 @@ const paths = {
       { key: "React", label: "React", icon: <FaReact />, hours: 35 },
       { key: "Responsive Design", label: "Responsive Design", icon: <BsKanbanFill />, hours: 35 },
       { key: "Git", label: "Git & GitHub", icon: <BsDiagram3Fill />, hours: 35 },
-      { key: "Deployment", label: "Deployment", icon: <BsCloudUploadFill />, hours: 35 },
-      { key: "Portfolio Project", label: "Portfolio Project", icon: <BsKanbanFill />, hours: 35 },
+    
     ],
   },
   fullstack: {
     label: "Full-Stack Development",
     roadmapTitle: "Your AI Learning Roadmap is Ready!",
     steps: [
-      { key: "JavaScript", label: "Javascript/ES6", icon: <FaJs />, hours: 15 },
-      { key: "React", label: "React Fundamentals", icon: <FaReact />, hours: 30 },
-      { key: "State Management", label: "State Management", icon: <BsDiagram3Fill />, hours: 25 },
-      { key: "Front-End Testing", label: "Front-End Testing", icon: <BsKanbanFill />, hours: 20 },
-      { key: "Responsive Design", label: "Responsive Design", icon: <BsKanbanFill />, hours: 20 },
-      { key: "Front-End Deployment", label: "Front-End Deployment", icon: <BsCloudUploadFill />, hours: 20 },
-      { key: "Python", label: "Python", icon: <FaPython />, hours: 15 },
-      { key: "SQL", label: "SQL", icon: <BsDatabaseFill />, hours: 15 },
-      { key: "Django", label: "Django", icon: <SiDjango />, hours: 20 },
+      { key: "HTML", label: "HTML", icon: <FaHtml5 />, hours: 10 },
+      { key: "CSS", label: "CSS", icon: <FaCss3Alt />, hours: 10 },
+      { key: "JavaScript", label: "JavaScript", icon: <FaJs />, hours: 15 },
+      { key: "Git", label: "Git & GitHub", icon: <BsDiagram3Fill />, hours: 20 },
+      { key: "React", label: "React", icon: <FaReact />, hours: 30 },
+      { key: "Python", label: "Python", icon: <FaPython />, hours: 20 },
+      { key: "SQL", label: "SQL & PostgreSQL", icon: <BsDatabaseFill />, hours: 25 },
+      { key: "Django", label: "Django", icon: <SiDjango />, hours: 25 },
       { key: "REST APIs", label: "REST APIs", icon: <BsDiagram3Fill />, hours: 25 },
-      { key: "Full-Stack Integration", label: "Full-Stack Integration", icon: <BsCloudUploadFill />, hours: 35 },
-      { key: "Full-Stack Capstone", label: "Full-Stack Capstone", icon: <BsKanbanFill />, hours: 40 },
+      { key: "Full-Stack Integration", label: "Full-Stack Integration", icon: <BsCloudUploadFill />, hours: 30 },
+      { key: "Deployment", label: "Deployment", icon: <BsCloudUploadFill />, hours: 20 },
+     
     ],
   },
 
@@ -80,11 +79,9 @@ const paths = {
       { key: "Linear Algebra", label: "Linear Algebra", icon: <BsCalculator />, hours: 20 },
       { key: "SQL", label: "SQL & Database", icon: <BsDatabaseFill />, hours: 25 },
       { key: "Statistical Inference", label: "Statistical Inference", icon: <BsClipboardData />, hours: 20 },
-      { key: "Machine Learning", label: "Machine Learning (Supervised)", icon: <BsCpuFill />, hours: 15 },
-      { key: "Unsupervised Learning", label: "Machine Learning (Unsupervised)", icon: <BsCpuFill />, hours: 20 },
-      { key: "Model Evaluation", label: "Model Evaluation", icon: <BsCheckSquareFill />, hours: 20 },
+      { key: "Machine Learning", label: "Machine Learning ", icon: <BsCpuFill />, hours: 15 },
       { key: "Deep Learning", label: "Deep Learning Basics", icon: <BsDiagram3Fill />, hours: 30 },
-      { key: "MLOps", label: "Model Deployment & MLOps", icon: <BsCloudUploadFill />, hours: 35 },
+     
     ],
   },
 
@@ -199,9 +196,7 @@ export default function OnboardingRoadmap() {
 
   const detectedSkills = skills.filter((sk) => skillIcons[sk.toLowerCase()]);
 
-  const knowledgeLabel =
-    career === "backend" ? "Back-End Knowledge" : career === "fullstack" ? "Back-End Knowledge" : "Front-End Knowledge";
-
+ 
   const roadmapTitle = path.roadmapTitle || "Your AI Learning Roadmap is Ready!";
 
   return (
@@ -282,7 +277,7 @@ export default function OnboardingRoadmap() {
         <button
           className="btn w-100 text-white fw-semibold rounded-pill py-2"
           style={{ backgroundColor: "#0D1B2A" }}
-          onClick={() => navigate("/dashboard")}
+         onClick={() => navigate(`/learning/${career}`)}
         >
           Start Learning
         </button>

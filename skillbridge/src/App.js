@@ -14,7 +14,10 @@ import OnboardingStep3 from "./pages/OnboardingStep3";
 import OnboardingFinalizing from "./pages/OnboardingFinalizing";
 import { OnboardingProvider } from "./context/OnboardingContext";
 import OnboardingRoadmap from "./pages/OnboardingRoadmap";
-// جوا <Routes>
+import CourseVideos from "./pages/CourseVideos";
+import MyProgress from "./pages/MyProgress";
+import Notifications from "./pages/Notifications"; 
+import Profile from "./pages/Profile";   
 
 function App() {
   return (
@@ -23,15 +26,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mentors" element={<Mentors />} />
-        {/* شاشة اختيار الدور - نفس الصورة 1 تُستخدم للحالتين */}
         <Route path="/signup" element={<RoleSelect intent="signup" />} />
         <Route path="/login" element={<RoleSelect intent="login" />} />
 
-        {/* مسارات الطالب */}
         <Route path="/signup/student" element={<AuthPage mode="signup" />} />
         <Route path="/login/student" element={<AuthPage mode="login" />} />
 
-        {/* مسارات المنتور */}
         <Route path="/signup/mentor" element={<MentorSignup />} />
         <Route path="/login/mentor" element={<MentorLogin />} />
 
@@ -42,6 +42,10 @@ function App() {
        <Route path="/onboarding/step-3" element={<OnboardingStep3 />} />
        <Route path="/onboarding/finalizing" element={<OnboardingFinalizing />} />
        <Route path="/onboarding/roadmap" element={<OnboardingRoadmap />} />
+       <Route path="/learning/:pathKey" element={<CourseVideos />} />
+       <Route path="/my-progress" element={<MyProgress />} />
+      <Route path="/notifications" element={<Notifications />} />   
+      <Route path="/profile" element={<Profile />} />
       </Routes>
     </OnboardingProvider>
     </BrowserRouter>
