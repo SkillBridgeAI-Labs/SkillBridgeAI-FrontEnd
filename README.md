@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-" # SkillBridge-AI" 
-=======
-# SkillBridge AI
+# SkillBridgeAI
 
 منصة تعلم ذكية تساعد الطلاب على بناء مسار تعلم شخصي ومتابعة تقدمهم.
 
 ## الميزات
+
 - تسجيل ودخول المستخدمين
 - إنشاء خطط تعلم مخصصة
 - استبيان لجمع بيانات المستخدم
@@ -16,6 +14,7 @@
 - لوحة تحكم للمشرف
 
 ## التقنيات المستخدمة
+
 - Python 3.14
 - FastAPI
 - SQLAlchemy
@@ -24,7 +23,7 @@
 - Pydantic
 
 ## طريقة التشغيل
-bash
+
+```bash
 pip install -r requirements.txt
 uvicorn app.main:app --reload
->>>>>>> dd9626c399870986cd8e23035f48857afef12472
