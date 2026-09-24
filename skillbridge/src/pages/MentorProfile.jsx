@@ -39,8 +39,13 @@ export default function MentorProfile() {
           {/* Logo */}
           <a
             className="navbar-brand fw-bold d-flex align-items-center gap-2 me-4"
-            href="/"
+            href="/mentor-dashboard"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/mentor-dashboard");
+            }}
             style={{ textDecoration: "none", color: "#212529" }}
+
           >
             <span
               className="d-inline-flex align-items-center justify-content-center rounded-circle"

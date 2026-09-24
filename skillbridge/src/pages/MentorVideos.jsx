@@ -180,13 +180,15 @@ export default function MentorVideos() {
                     }}
                   />
                 </div>
-            <div
-              className="rounded-circle d-flex align-items-center justify-content-center fw-semibold text-white"
-              style={{ width: 34, height: 34, backgroundColor: "#0D9488", fontSize: 13 }}
-              role="button"
-            >
-              LH
-            </div>
+                    <div
+            className="rounded-circle d-flex align-items-center justify-content-center fw-semibold text-white"
+            style={{ width: 34, height: 34, backgroundColor: "#0D9488", fontSize: 13, cursor: "pointer" }}
+            role="button"
+            aria-label="Open profile"
+            onClick={() => navigate("/mentor-dashboard/profile")}
+          >
+            LH
+          </div>
           </div>
         </div>
       </nav>
