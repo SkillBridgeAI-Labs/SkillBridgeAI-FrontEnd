@@ -18,9 +18,20 @@ import CourseVideos from "./pages/CourseVideos";
 import MyProgress from "./pages/MyProgress";
 import Notifications from "./pages/Notifications"; 
 import Profile from "./pages/Profile";   
+import MentorDashboard from "./pages/MentorDashboard"; 
+import QuizBuilder from "./pages/QuizBuilder";
+import MentorVideos from "./pages/MentorVideos";
+import Notifications2 from "./pages/Notifications2";
+import MentorProfile from "./pages/MentorProfile";
+
+
+
+
+  
 
 function App() {
   return (
+    
     <BrowserRouter>
     <OnboardingProvider>
       <Routes>
@@ -46,10 +57,22 @@ function App() {
        <Route path="/my-progress" element={<MyProgress />} />
       <Route path="/notifications" element={<Notifications />} />   
       <Route path="/profile" element={<Profile />} />
+      <Route path="/mentor-dashboard" element={<MentorDashboard />} />
+      <Route path="/mentor-dashboard/create-quiz" element={<QuizBuilder />} />
+     <Route path="/mentor-dashboard/upload-video" element={<MentorVideos />} />
+          <Route
+        path="/mentor-dashboard/notifications"
+        element={<Notifications2 />}
+      />
+      <Route
+  path="/mentor-dashboard/profile"
+  element={<MentorProfile />}
+/>
       </Routes>
     </OnboardingProvider>
     </BrowserRouter>
-
+  
+   
   );
 }
 

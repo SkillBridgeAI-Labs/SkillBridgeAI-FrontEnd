@@ -22,6 +22,7 @@ export default function MentorLogin() {
     e.preventDefault();
     // TODO: اربطها بالـ API الخاص بتسجيل دخول المنتور
     console.log("Mentor login:", form);
+      navigate("/mentor-dashboard");
   };
 
   return (

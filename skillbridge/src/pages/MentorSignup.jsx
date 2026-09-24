@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -35,6 +34,7 @@ export default function MentorSignup() {
     e.preventDefault();
     // TODO: اربطها بالـ API الخاص بإنشاء حساب المنتور
     console.log("Mentor sign up:", { ...form, bio });
+    navigate("/mentor-dashboard");
   };
 
   return (

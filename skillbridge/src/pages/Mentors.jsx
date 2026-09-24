@@ -3,7 +3,7 @@
 import { useNavigate } from "react-router-dom";
 import { BsSearch, BsBell, BsHeart, BsHeartFill, BsStarFill, BsPersonWorkspace, BsPeopleFill } from "react-icons/bs";
 import React, { useState } from "react";
-import ContactModal from "../pages/ContactModal";
+import ContactModal from "../components/ContactModal";
 
 const mentors = [
   {
